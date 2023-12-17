@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.app-container h1 {
+  color: #cf2680;
+  font-size: 32px;
+  white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-container button {
+  width: 250px;
+  height: 60px;
+  transition: all 0.3s ease;
+  background: #cf2680;
+  color: #fff;
+  border: 2px solid transparent;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.app-container button:hover {
+  color: #cf2680;
+  border: 2px solid #cf2680;
+  background: #fff;
+}
+
+.app-container p {
+  font-size: 24px;
+  transition: all 0.3s ease;
+  height: 40px;
+}
+
+.app-container .paul {
+  position: absolute;
+  bottom: 0;
+}
+
+.app-container .glasses {
+  position: absolute;
+  top: -100px;
+}
+
+.falling-container {
+  position: relative;
+  z-index: 1;
+  left: -140px;
+  top: 260px;
+}
+
+.falling-animation {
+  animation: fallAnimation 1s ease-out;
+}
+
+@keyframes fallAnimation {
+  0% {
+    transform: translateY(-100vh);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 530px) {
+  .app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .falling-container {
+    position: relative;
+    z-index: 1;
+    left: -140px;
+    top: 220px;
   }
 }
