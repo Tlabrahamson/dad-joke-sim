@@ -49,7 +49,7 @@ function App() {
       <div className={`falling-container ${falling ? 'falling-animation' : ''}`}>
         {jokeFetched && <img className='glasses' src={glasses} alt="A pair of meme glasses" />}
       </div>
-        <img className='paul' src={paul} alt="A photo of Paul" />
+        <img className='paul' src={paul} alt="Paul" />
     </main>
   );
 }
